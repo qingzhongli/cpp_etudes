@@ -776,7 +776,7 @@ sub format_tree($;$) {
   foreach my $chd (@child) {
     my ($first, @rest) = &format_tree($chd, $verbose);
     push @result, "├── $first";
-    push @result, map {"│   $_"} @rest;
+    push @result, map {"│   $_"} @rest;
   }
   my ($first, @rest) = &format_tree($last_child, $verbose);
   push @result, "└── $first";

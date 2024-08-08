@@ -53,7 +53,7 @@ sub format_tree($$$$\&\&) {
       next;
     }
     push @result, "├── $first";
-    push @result, map {"│   $_"} @rest;
+    push @result, map {"│   $_"} @rest;
   }
 
   my ($first, @rest) = &format_tree($last_child, $level + 1, $verbose, $enable_prune, $get_entry, $get_child);
