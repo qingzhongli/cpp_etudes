@@ -786,5 +786,6 @@ sub format_tree($;$) {
 }
 
 my @lines = format_tree $hierarchy, $verbose;
-@lines = map {"  $_"} ("", @lines, "");
+#@lines = map {"  $_"} ("", @lines, "");
+@lines = map {"$_"} ("", @lines, "");
 print join qq//, map {"$_\n"} @lines;
